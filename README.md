@@ -2,7 +2,7 @@
 
 Reusable, hardware/protocol-level building blocks for building tactile web apps on the KGS Dot Pad, extracted from [DotSVG](https://github.com/touchout-org/dotsvg) and [DotTMAP](https://github.com/touchout-org/tmap) so the same lessons don't have to be relearned by every new project.
 
-Plain ES modules, no build step, no bundler, no npm dependency. Import directly by relative path, or copy the files you need into your own project alongside your own copy of `vendor/web-sdk-3.0.0/`.
+Plain ES modules, no build step, no bundler, no npm dependency. Import directly by relative path, or copy the files you need into your own project alongside your own copy of `vendor/web-sdk-3.0.1/`.
 
 **Scope:** this library covers Dot Pad hardware and wire-protocol concerns only — braille encoding, tactile rasterization, BLE connection, and device I/O. It deliberately does not include anything about what your app is actually displaying (maps, drawings, whatever) — that domain logic stays in your app.
 
@@ -17,12 +17,12 @@ Plain ES modules, no build step, no bundler, no npm dependency. Import directly 
 | [`device/graphicsDisplay.js`](device/graphicsDisplay.js) | Prep and send for the tactile graphics display: dot-grid dimensions from device cell counts, packing, the clear-then-write send. |
 | [`device/connection.js`](device/connection.js) | BLE connection lifecycle: scan, connect, disconnect, and a named-callback wrapper around `sdk.setCallBack()`. |
 | [`device/keys.js`](device/keys.js) | Decodes a raw key event into a 6-dot chord bitmask, and from there into a cursor direction or a NABCC letter. |
-| [`vendor/web-sdk-3.0.0/`](vendor/web-sdk-3.0.0/) | The KGS Dot Pad Web SDK, vendored as-is (matches DotSVG's and DotTMAP's own copies). |
+| [`vendor/web-sdk-3.0.1/`](vendor/web-sdk-3.0.1/) | The Dot Pad Web SDK, vendored as-is (matches DotSVG's and DotTMAP's own copies). |
 
 ## Usage
 
 ```js
-import { DotPadSDK, DotPadScanner, DisplayMode, DataCodes } from './vendor/web-sdk-3.0.0/DotPadSDK-3.0.0.js';
+import { DotPadSDK, DotPadScanner, DisplayMode, DataCodes } from './vendor/web-sdk-3.0.1/DotPadSDK-3.0.1.js';
 import { connectDotPad, disconnectDotPad, watchDotPad } from './device/connection.js';
 import { sendTextToDevice, truncateMessage } from './device/messageDisplay.js';
 import { sendGraphicToDevice, graphicsDimensions } from './device/graphicsDisplay.js';

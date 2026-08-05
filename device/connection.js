@@ -2,7 +2,7 @@
 // Connected/Disconnected/ConnectedFail callbacks.
 //
 // Takes your own `sdk` (DotPadSDK), `scanner` (DotPadScanner), and
-// `DataCodes` instances/exports (see ../vendor/web-sdk-3.0.0/) rather than
+// `DataCodes` instances/exports (see ../vendor/web-sdk-3.0.1/) rather than
 // owning singletons itself, so the calling app controls their lifetime.
 // DataCodes values are plain strings (e.g. "Connected"), so it's safe to
 // pass a DataCodes reference from a different vendored copy of the SDK file
